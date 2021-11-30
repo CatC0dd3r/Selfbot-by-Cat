@@ -49,7 +49,7 @@ async def sc(ctx, token):
     await ctx.send(sc)
 @bot.event
 async def on_ready():
-    channel = bot.get_channel(895787911310630996)
+    channel = bot.get_channel(chennel)
     await bot.change_presence(activity=discord.Streaming(name="Селфбот включен", url="https://www.youtube.com/channel/UCl_vlQNBSLU_aQ41o8batJQ"))    
     message=await channel.send(f"Текущий пинг селфбота: {int(bot.latency*1000)}ms⏲")
     await channel.send("CatStark © 2021. Все права застроены обсидианом")
