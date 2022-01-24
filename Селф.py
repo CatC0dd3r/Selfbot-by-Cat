@@ -1,4 +1,4 @@
-import threading  # Подключаем модуль threading для работы с потоками
+import threading
 import socket
 import sys
 import discum
@@ -363,6 +363,13 @@ async def pars_simcard(ctx,*,text):
     except:
         await ctx.send("Не найдено!")
 
+@bot.command(aliases=['linkall', 'Link_All'])
+async def link_all(ctx):
+    for guild in bot.guilds:
+        for member in guild.members:
+            await ctx.send(member.mention)
+        
+        
 @bot.command(aliases=['help', 'h', 'помощь', 'Help'])
 async def __help(ctx):
     embed = discord.Embed(colour=discord.Color.from_rgb(255, 215, 0))
