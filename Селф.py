@@ -58,8 +58,7 @@ async def Spam(ctx, *, text):
     await ctx.message.delete()
     while True:
         await ctx.send(text)
-        if ctx.message.content == "C1топ":
-            break
+
 
 @bot.command()
 async def ping(ctx):
